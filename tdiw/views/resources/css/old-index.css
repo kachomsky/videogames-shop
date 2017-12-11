@@ -1,0 +1,73 @@
+@media screen and (max-width: 600px) {
+	header a{
+		display: block;
+	}	
+}
+
+body{
+	margin: 0;
+}
+
+header{
+	margin: 0;
+	background: #B82601;
+}
+
+header h1{
+	margin: 0;
+	color: white;
+	font-family: "Century Gothic";
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 40px;
+}
+
+header nav{
+	background: #5C5C5C;
+}
+
+header ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden; 
+}
+
+
+header li{
+	float: left;
+}
+
+header a{
+	display: block;
+	color:white;
+	padding: 8px;
+	text-decoration: none;
+}
+
+header a:hover {
+	background-color: darkcyan;
+	font-weight: bold;
+}
+
+section {
+	background:
+	linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+	linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+	linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+	linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+	linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+	linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+	background-color: #131313;
+	background-size: 20px 20px;
+}
+
+footer{
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: #5C5C5C;
+	color: white;
+	text-align: center;
+}

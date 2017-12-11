@@ -1,0 +1,11 @@
+.form {
+    margin: auto;
+    font-family: Amiko;
+    text-align: center;
+}
+
+.form input {
+    font-family: Amiko;
+    size: 150px;
+    border-radius:5px;
+}

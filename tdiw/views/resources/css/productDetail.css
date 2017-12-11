@@ -1,0 +1,46 @@
+.detailBox{
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+.imageDetail{
+    height: 500px;
+    float: left;
+    display: inline-block;
+    width: 40%;
+    margin-right: 4%;
+    margin-bottom: 5%;
+}
+
+#details{
+    float: left;
+    display: inline-block;
+    width: 50%;
+}
+
+.plusButton{
+    width: 8%;
+    height: 8%;
+}
+
+
+.imageDetail img{
+    width: 100%;
+    height: 100%;
+}
+
+.buttonQuantity{
+    background-color: #448AFF;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    border-radius: 30em;
+    margin-left: 0px;
+}
+
+footer{
+    clear:both;
+}
