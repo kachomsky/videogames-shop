@@ -23,6 +23,10 @@ header{
 	background: #3F51B5;
 }
 
+header a#ImageLogo {
+	text-decoration: none;
+}
+
 header h1{
 	margin:0;
 	font-family: 'Rock Salt';
@@ -149,6 +153,7 @@ h2 {
     transition: all 200ms ease-in;
     transform: scale(1.5);
     border: solid #448AFF 2px;
+    cursor: pointer;
 }
 
 .Category img{

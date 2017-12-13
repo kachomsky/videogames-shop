@@ -2,9 +2,6 @@
 
 $id_category = $_GET['category_id'];
 
-include __DIR__.'/../models/db.php';
-include __DIR__.'/../models/products.php';
-
 $productCategory = getProductCategoryName($id_category);
 
 if($id_category == 1){

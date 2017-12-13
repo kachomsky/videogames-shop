@@ -1,5 +1,5 @@
 <header>
-    <h1>Dreamstore</h1>
+    <a id="ImageLogo" href="index.php"><h1>Dreamstore</h1></a>
     <a class="login" href="index.php?action=sign-up"><img src="views/resources/img/signup.png" ></a>
     <?php
     if(isset($_SESSION['email'])){ ?>

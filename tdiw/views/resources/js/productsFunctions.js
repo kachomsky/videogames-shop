@@ -30,7 +30,6 @@ $( document ).ready(function() {
         var productToAdd = $(this).data("value");
         var quantityAdded = $(".quantityVal").val();
         productToAdd.quantity = quantityAdded;
-        //alert(JSON.stringify(productToAdd));
 
         $.ajax({
             type: "POST",

@@ -1,8 +1,5 @@
 <?php
 
-include __DIR__.'/../models/db.php';
-include __DIR__.'/../models/signIn.php';
-
 $error = false;
 $logged = false;
 

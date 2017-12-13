@@ -1,4 +1,6 @@
 <?php
+include __DIR__.'/init.php';
+
 $action = $_GET['action'];
 session_start();
 switch ($action) {

@@ -1,8 +1,5 @@
 <?php
 
-include __DIR__.'/../models/db.php';
-include __DIR__.'/../models/signUp.php';
-
 if (isset($_POST['submit'])){
     if(!empty($_POST['name']) AND !empty($_POST['password']) AND !empty($_POST['email']) AND !empty($_POST['address'])
         AND !empty($_POST['city']) AND !empty($_POST['postal_code']) AND filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
