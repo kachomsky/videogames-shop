@@ -1,33 +1,42 @@
 <header>
     <a id="ImageLogo" href="index.php"><h1>Dreamstore</h1></a>
-    <a class="login" href="index.php?action=sign-up"><img src="views/resources/img/signup.png" ></a>
+    <a class="login" href="index.php?action=sign-up"><img src="<?php echo __IMG_REL_PATH__?>signup.png" ></a>
     <?php
-    if(isset($_SESSION['email'])){ ?>
+    if(isset($_SESSION['user'])){ ?>
         <div class="login">
-            <img id="menuProfile" src="views/resources/img/logged.png" >
+            <img id="menuProfile" src="<?php echo __IMG_REL_PATH__?>logged.png" >
             <ul class="userMenu">
-                <li><a href="#">El meu compte.</a></li><br/>
-                <li><a href="#">Les meves compres.</a></li><br/>
-                <li><a href="index.php?action=log-out">Tancar sessió.</a></li><br/>
+                <li><a href="#">My account.</a></li><br/>
+                <li><a href="index.php?action=user-commands">My commands.</a></li><br/>
+                <li><a href="index.php?action=log-out">Logout.</a></li><br/>
             </ul>
         </div>
-        <span id="cart" class="login" href=""><img src="views/resources/img/cart.png" ></span>
+        <span id="cart" class="login" href=""><img src="<?php echo __IMG_REL_PATH__?>cart.png" ></span>
         <!-- ****************************-->
-
+    <?php }else if(isset($_SESSION['admin'])){ ?>
+        <div class="login">
+            <img id="menuProfile" src="<?php echo __IMG_REL_PATH__?>logged.png" >
+            <ul class="userMenu">
+                <li><a href="index.php?action=admin-commands">List of commands.</a></li><br/>
+                <li><a href="index.php?action=admin-list-products">List of products.</a></li><br/>
+                <li><a href="index.php?action=admin-add-product">Add product.</a></li><br/>
+                <li><a href="index.php?action=admin-logout">Logout.</a></li><br/>
+            </ul>
+        </div>
         <?php
     }else {
         ?>
-        <a class="login" href="index.php?action=sign-in"><img src="views/resources/img/login.png" ></a>
+        <a class="login" href="index.php?action=sign-in"><img src="<?php echo __IMG_REL_PATH__?>login.png" ></a>
         <?php
     }
     ?>
-    <img src="views/resources/img/logo.png" class="logo"/><br>
-	
+    <img src="<?php echo __IMG_REL_PATH__?>logo.png" class="logo"/><br>
+
 	<span>Best entertainment at the best price</span>
 	<nav>
         <div class="login" id="menuCartProducts"></div>
 		<ul>
-			<li><a class="homeButton" href="index.php"><img src="views/resources/img/home.png"></a></li>
+			<li><a class="homeButton" href="index.php"><img src="<?php echo __IMG_REL_PATH__?>home.png"></a></li>
 			<li><a href="#">Everything</a></li>
 			<li><a href="#">Games</a>
 				<ul>
@@ -54,7 +63,7 @@
 					<li><a href="#">Satire</a></li>
 				</ul>
 			</li>
-			<li><a href="#">Special Offers</a></li>	
+			<li><a href="#">Special Offers</a></li>
 		</ul>
 	</nav>
 </header>

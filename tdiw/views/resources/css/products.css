@@ -504,3 +504,12 @@ div.products ul li{
     display: table;
     clear: both;
 }
+
+.emptyCartLink{
+    color:blue;
+    text-decoration: underline;
+}
+
+.emptyCartLink:hover{
+    cursor:pointer;
+}

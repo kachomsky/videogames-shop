@@ -6,10 +6,11 @@
  * Time: 18:42
  */
 
-function logInUser($email) {
+function logInAdminUser($email) {
     $dbh = connect();
 
-    $sql_query = $dbh->prepare("SELECT * FROM user u WHERE u.email = :email");
+    $sql_query = $dbh->prepare("SELECT a_u.password
+    FROM admin_user a_u WHERE a_u.email = :email");
     $sql_query->bindParam(":email", $email, PDO::PARAM_STR);
     $sql_query->execute();
 

@@ -17,7 +17,7 @@
             <a class="showProducts"> <!-- href="index.php?action=list-products"-->
                 <h3><?php echo $category['name'] ?></h3>
                 <div class="Category" id="category<?php echo $index+1;?>" data-value="<?php echo $category['id']; ?>">
-                    <img class="iconCategory" src="views/resources/img/<?php echo $category['image'] ?>.<?php echo $category['image_type']?>" />
+                    <img class="iconCategory" src="<?php echo __IMG_REL_PATH__.$category['image']; ?>" />
                 </div>
             </a>
             <p><?php echo $category['description']?></p>

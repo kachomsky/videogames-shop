@@ -9,16 +9,21 @@
         </div> <!--end shopping-cart-header -->
 
         <ul class="shopping-cart-items">
-            <?php foreach($_SESSION['cart'] as $product): ?>
+            <?php if(!empty($_SESSION['cart'])):?>
+            <?php print_r($_SESSION['carro']); foreach($_SESSION['cart'] as $product): ?>
                 <li class="clearfix">
-                    <img src="views/resources/img/<?php echo $product['image'] ?>.<?php echo $product['img_type'] ?>" />
+                    <img src="<?php echo __IMG_REL_PATH__.$product['image']; ?>" />
                     <span class="item-name"><?php echo $product['name']; ?></span>
                     <span class="item-price"><?php echo $product['price']; echo "&euro;" ?></span>
                     <span class="item-quantity">Quantity: <?php echo $product['quantity']; ?></span>
                 </li>
             <?php endforeach; ?>
+            <?php else:?>
+                <span class="item-name">Cart is empty</span>
+            <?php endif; ?>
         </ul>
 
         <a href="index.php?action=cart-management&menu=2" class="button">See details</a>
+        <span id="emptyCart" class="emptyCartLink">Empty cart</span>
     </div> <!--end shopping-cart -->
 </div> <!--end container -->

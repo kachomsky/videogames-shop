@@ -25,7 +25,11 @@ $( document ).ready(function() {
             $(".shopping-cart-menu").fadeToggle( "fast");
             hide = true;
         }
-
+    });
+    $(document).on("click", "#emptyCart", function () {
+        $('#menuCartProducts').load('index.php?action=cart-management&menu=3', function(){
+            console.log("Product loaded.");
+        })
     });
 
 });

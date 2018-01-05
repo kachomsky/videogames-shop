@@ -3,7 +3,7 @@
  
     <div class="detailBox">
         <div class="imageDetail">
-            <img src="views/resources/img/<?php echo $product['image'];?>.<?php echo $product['img_type'];?>" />
+            <img src="<?php echo __IMG_REL_PATH__.$product['image']; ?>" />
         </div>
         <div id="details">
             <h3><?php echo $product['name'];?></h3>
@@ -18,7 +18,7 @@
             <p style="margin-left: 9%"><b>In stock</b></p>
 
             <p>Price:<?php echo $product['price']; echo "&euro;" ?></p>
-            <input data-value='<?php echo json_encode($product, JSON_UNESCAPED_UNICODE) ?>' name="addCartButton" class="addCartButton" type="button" value="Add to Cart" />
+            <input data-value="<?php echo $product['id'];?>" name="addCartButton" class="addCartButton" type="button" value="Add to Cart" />
         </div>
     </div>
 </section>

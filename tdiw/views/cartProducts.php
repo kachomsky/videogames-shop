@@ -15,10 +15,11 @@
                 Shopping cart
             </div>
 
+            <?php if(!empty($_SESSION['cart'])): ?>
             <?php foreach($_SESSION['cart'] as $product): ?>
             <div class="item">
                 <div class="image">
-                    <img height="100" width="100" src="views/resources/img/<?php echo $product['image'] ?>.<?php echo $product['img_type'] ?>"  />
+                    <img height="100" width="100" src="<?php echo __IMG_REL_PATH__.$product['image']; ?>"  />
                 </div>
 
                 <div class="descriptionCart">
@@ -30,10 +31,15 @@
                 <div class="total-price"><?php echo $product['totalPrice']; echo "&euro;" ?></div>
 
             </div>
-
             <?php endforeach; ?>
-            <p>Total Price: <?php echo $totalPriceCart;  echo "&euro;"; ?></p>
-            <input class="buyButton" type="button" value="   Buy   " />
+                <p>Total Price: <?php echo $totalPriceCart;  echo "&euro;"; ?></p>
+                <?php if(isset($_SESSION['user'])){ ?>
+                <input class="buyButton" type="button" value="   Buy   " onclick="window.location.href='index.php?action=buy'"> />
+                <?php } ?>
+            <?php else: ?>
+                <p>Cart is empty</p>
+            <?php endif; ?>
+
         </div>
 
         <?php
